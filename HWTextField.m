@@ -95,9 +95,6 @@ typedef void (^HWTextFieldPredicateHandler)(BOOL,NSString *);
         if (self.predicateHandler) {
             self.predicateHandler(isWork,@"");
         }
-        if (!isWork) {
-            return NO;
-        }
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
         return [self.delegate textField:textField shouldChangeCharactersInRange:range replacementString:string];
